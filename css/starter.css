@@ -21,7 +21,6 @@ body{
     font-size: 16pt; /* test for this! Make all sizes em or rem */
     font-family:'Poppins', sans-serif;
     background-image:url('/images/concrete_seamless.png');/*is this working?*/
-
   }
   
   header{
