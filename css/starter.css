@@ -1,7 +1,27 @@
+/*step 1 key frames*/
+@keyframes mymove{
+  0%{
+    width:25px;
+    opacity:0;
+  }
+  100%{
+    width:475px;
+    opacity:1;
+  }
+  
+}
+.logo{
+  animation:mymove 5s ease-out;
+}
+
+
 body{
     margin: 0;
     padding: 0;
     font-size: 16pt; /* test for this! Make all sizes em or rem */
+    font-family:'Poppins', sans-serif;
+    background-image:url('/images/concrete_seamless.png');/*is this working?*/
+
   }
   
   header{
