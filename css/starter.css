@@ -9,9 +9,12 @@ body{
   }
   
   header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
     background: #fff;
     border-bottom: 3px solid #50C7C7;
-    margin-bottom:20px
+    margin-bottom:20px;
   }
   
   h1{

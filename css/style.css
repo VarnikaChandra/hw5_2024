@@ -10,11 +10,23 @@
     }
     
   }
-  .logo{
+.logo{
     animation:mymove 5s ease-out;
-  }
+}
 body{
     font-family:'Poppins', sans-serif;
     background-image:url("/images/concrete_seamless.png");
     background-color:#f1f1f1;
 }
+
+/*step 6 card class*/
+
+
+.card>header{ 
+    background: #288088;
+    border: 2px solid #45ADAD;
+    padding: 20px 0; 
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
