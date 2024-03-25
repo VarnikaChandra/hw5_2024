@@ -89,11 +89,12 @@ header{
 
 @media(prefers-reduced-motion){
     #logo{
-        animation:none;/*modify the animation to be nothing*/
+        animation:none;/*modify the
+         animation to be nothing*/
     }
 }
 
-@media print and(orientation:portrait){
+@media print and (orientation:portrait){
     body{
         font-family:Arial, Helvetica;
         background-image:none;
