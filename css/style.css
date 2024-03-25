@@ -10,14 +10,29 @@
     }
     
   }
-.logo{
-    animation:mymove 5s ease-out;
+#logo{/* id logo */
+    animation:mymove 5s;
 }
+
 body{
     font-family:'Poppins', sans-serif;
-    background-image:url("/images/concrete_seamless.png");
+    background-image: url('../images/concrete_seamless.png');
     background-color:#f1f1f1;
 }
+
+header{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.nav_links{
+    display:flex;
+    flex-direction:column;
+}
+.nav_item > a:visited{
+    color:#0000EE;
+} 
 
 /*step 6 card class*/
 
@@ -25,8 +40,91 @@ body{
 .card>header{ 
     background: #288088;
     border: 2px solid #45ADAD;
-    padding: 20px 0; 
+    padding: 40px 0; 
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
 }
+.card{
+    flex-basis:450px;
+}
+/* appropriate space on sides */
+/*corners seen*/
+.pricing{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.gallery {
+    display:flex; 
+    flex-wrap:wrap;
+    justify-content:center;
+}
 
+.gallery img {
+    border: 10px solid #50C7C7;
+    margin:10px;
+    width: 300px; /* Or use a percentage value to make it responsive */
+}
+
+@media screen and (min-width:900px){
+    header{
+        flex-direction:row;/*default in line row*/
+        justify-content:space-between; /*left and right*/ 
+    }
+    .nav_links{
+        flex-direction:row;/*written in a row*/
+    }
+    .card{
+        flex-basis:275px;/*flex property?? */
+    }
+    .pricing{
+        flex-direction:row;
+    }
+    body>header:first-of-type{
+        position:fixed;/* always visible */
+        width:100%;/*links plus the logo*/
+   }
+}
+
+@media(prefers-reduced-motion){
+    #logo{
+        animation:none;/*modify the animation to be nothing*/
+    }
+}
+
+@media print and(orientation:portrait){
+    body{
+        font-family:Arial, Helvetica;
+        background-image:none;
+    }
+    header{
+        flex-direction:row;
+        justify-content:space-between;
+
+    }
+    .nav_links{
+        flex-direction:row;
+    }
+    .pricing{
+        flex-direction:row;
+        align-items:flex-end;/*end of container.*/
+    }
+    .card{
+        flex-basis:325px;
+        border: 2px solid #45ADAD
+    }
+    .gallery>img{
+        opacity:0;
+    }
+    .gallery{
+        opacity:0;
+    }
+    #gallery{
+        font-size:0;
+    }
+    /*thumbs */
+    .card li:nth-child(2)::after{
+        content: "\01F44D";
+    }
+}
